@@ -14,7 +14,7 @@ class MicropostsTest < ApplicationSystemTestCase
     visit microposts_url
     click_on "New Micropost"
 
-    fill_in "Context", with: @micropost.context
+    fill_in "Content", with: @micropost.content
     fill_in "User", with: @micropost.user_id
     click_on "Create Micropost"
 
@@ -26,7 +26,7 @@ class MicropostsTest < ApplicationSystemTestCase
     visit microposts_url
     click_on "Edit", match: :first
 
-    fill_in "Context", with: @micropost.context
+    fill_in "Content", with: @micropost.content
     fill_in "User", with: @micropost.user_id
     click_on "Update Micropost"
 
