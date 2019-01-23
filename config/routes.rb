@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :microblogs
   resources :microposts
   resources :users
   root 'application#goodbye'

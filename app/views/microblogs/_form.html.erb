@@ -1,0 +1,27 @@
+<%= form_with(model: microblog, local: true) do |form| %>
+  <% if microblog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(microblog.errors.count, "error") %> prohibited this microblog from being saved:</h2>
+
+      <ul>
+      <% microblog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user %>
+    <%= form.text_field :user %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blog %>
+    <%= form.text_field :blog %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
