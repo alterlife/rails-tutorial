@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_185209) do
-
-  create_table "microblogs", force: :cascade do |t|
-    t.integer "user"
-    t.string "blog"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2019_01_23_185900) do
 
   create_table "microposts", force: :cascade do |t|
-    t.text "context"
+    t.text "content"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
