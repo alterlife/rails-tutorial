@@ -10,5 +10,15 @@
   <%= @user.email %>
 </p>
 
+
+<h2> Microposts </h2>
+<table>
+  <% @user.microposts.each do |micropost| %>
+  <tr>
+    <%= micropost.content %>
+  </tr>
+  <% end %>
+</table>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
